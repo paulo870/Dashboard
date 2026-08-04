@@ -2,26 +2,49 @@
 // CURRENT BOOK
 // =====================================
 
-const BOOK = "BR-Intermediate";
+
+const BOOK =
+window.BOOK.id;
+
+
 
 // =====================================
 // SUPABASE STORAGE
 // =====================================
 
+
 const STORAGE =
-"https://YOUR_PROJECT.supabase.co/storage/v1/object/public/books/";
+window.BOOK.root;
 
-function image(file) {
-    return `${STORAGE}${BOOK}/images/${file}`;
+
+
+// =====================================
+// MEDIA PATH HELPERS
+// =====================================
+
+
+function image(file){
+
+    return `${STORAGE}images/${file}`;
+
 }
 
-function audio(file) {
-    return `${STORAGE}${BOOK}/audio/${file}`;
+
+
+function audio(file){
+
+    return `${STORAGE}audio/${file}`;
+
 }
 
-function video(file) {
-    return `${STORAGE}${BOOK}/video/${file}`;
+
+
+function video(file){
+
+    return `${STORAGE}video/${file}`;
+
 }
+
 const slideImage = document.getElementById("slide-image");
 const slideContainer = document.querySelector(".slide-container");
 const homeBtn = document.getElementById("home-btn");
