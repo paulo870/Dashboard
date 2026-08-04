@@ -22,11 +22,10 @@ if (!BOOK_ID) {
 
 
 
-// CHANGE THIS TO YOUR REAL SUPABASE URL
+
 
 const STORAGE_ROOT =
-"https://YOUR_REAL_PROJECT.supabase.co/storage/v1/object/public/books/";
-
+https://vjzcwbvyfnnwsuaxeauw.supabase.co/rest/v1/
 
 
 const BOOK_ROOT =
