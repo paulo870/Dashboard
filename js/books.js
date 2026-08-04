@@ -1,6 +1,4 @@
-const STORAGE =
-"https://vjzcwbvyfnnwsuaxeauw.supabase.co/storage/v1/object/public/books/";
-
+const STORAGE = "https://vjzcwbvyfnnwsuaxeauw.supabase.co/rest/v1/"
 
 const books = [
 
@@ -14,8 +12,7 @@ const books = [
 
     password:"1234",
 
-    cover:
-    `${STORAGE}BR-Intermediate/images/homepage.jpeg`
+    cover:  `${STORAGE}BR-Intermediate/images/homepage.jpeg`
 
 },
 
