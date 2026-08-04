@@ -1,7 +1,9 @@
 const STORAGE =
-"https://YOUR_PROJECT.supabase.co/storage/v1/object/public/books/";
+"https://vjzcwbvyfnnwsuaxeauw.supabase.co/storage/v1/object/public/books/";
+
 
 const books = [
+
 
 {
     id:"BR-Intermediate",
@@ -13,7 +15,9 @@ const books = [
     password:"1234",
 
     cover:
-`${STORAGE}BR-Intermediate/images/homepage.jpeg`
-}
+    `${STORAGE}BR-Intermediate/images/homepage.jpeg`
+
+},
+
 
 ];
