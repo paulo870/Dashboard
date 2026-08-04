@@ -1,10 +1,10 @@
 [
     {
-        "title": "BR-Intermediate",
+        "id": "BR-Intermediate",
+        "title": "Business Result Intermediate",
         "folder": "BR-Intermediate",
-        "category":"adults",
+        "category": "Adults",
         "cover": "https://vjzcwbvyfnnwsuaxeauw.supabase.co/storage/v1/object/public/books/BR-Intermediate/images/homepage.jpeg",
-        "path": "https://vjzcwbvyfnnwsuaxeauw.supabase.co/storage/v1/object/public/books/BR-Intermediate/index.html",
         "password": "1234"
     }
 ]
