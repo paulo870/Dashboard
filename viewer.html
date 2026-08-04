@@ -9,12 +9,9 @@
 Poliglota Presentation Plus
 </title>
 
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <link rel="stylesheet" href="css/viewer.css">
-
 
 </head>
 
@@ -22,23 +19,14 @@ Poliglota Presentation Plus
 <body>
 
 
-
-<!-- ==========================
-     PRESENTATION PLUS CONTAINER
-========================== -->
-
-
 <div id="app">
-
 
 
 <!-- ==========================
      CONTROL BAR
 ========================== -->
 
-
 <div class="control-bar">
-
 
 
 <a href="#" id="home-btn">
@@ -50,10 +38,6 @@ alt="Home">
 
 </a>
 
-
-
-
-<!-- STUDENT BOOK -->
 
 
 <div class="dropdown">
@@ -68,7 +52,6 @@ alt="Students Book">
 <div class="dropdown-content"
 id="students-book-dropdown">
 
-
 <a href="#" data-unit="1">Unit 1</a>
 <a href="#" data-unit="2">Unit 2</a>
 <a href="#" data-unit="3">Unit 3</a>
@@ -82,17 +65,11 @@ id="students-book-dropdown">
 <a href="#" data-unit="11">Unit 11</a>
 <a href="#" data-unit="12">Unit 12</a>
 
+</div>
 
 </div>
 
 
-</div>
-
-
-
-
-
-<!-- ACTIVITY BOOK -->
 
 
 <div class="dropdown">
@@ -121,17 +98,11 @@ id="activity-book-dropdown">
 <a href="#" data-unit="11">Unit 11</a>
 <a href="#" data-unit="12">Unit 12</a>
 
+</div>
 
 </div>
 
 
-</div>
-
-
-
-
-
-<!-- MEDIA -->
 
 
 <a href="#" id="audio-btn">
@@ -144,7 +115,6 @@ alt="Audio">
 </a>
 
 
-
 <a href="#" id="video-btn">
 
 <img
@@ -153,7 +123,6 @@ class="control-icon"
 alt="Video">
 
 </a>
-
 
 
 <a href="#" id="edit-btn">
@@ -166,7 +135,6 @@ alt="Edit">
 </a>
 
 
-
 <a href="#" id="whiteboard-btn">
 
 <img
@@ -175,7 +143,6 @@ class="control-icon"
 alt="Whiteboard">
 
 </a>
-
 
 
 <a href="#" id="games-btn">
@@ -188,7 +155,6 @@ alt="Games">
 </a>
 
 
-
 <div class="control-logo">
 
 <img src="assets/logo.png">
@@ -196,10 +162,7 @@ alt="Games">
 </div>
 
 
-
 </div>
-
-
 
 
 
@@ -228,7 +191,6 @@ alt="Slide">
 </div>
 
 
-
 <button id="prev-btn">
 &#9664;
 </button>
@@ -245,16 +207,9 @@ alt="Slide">
 
 
 
-
-
-
-<!-- ==========================
-     AUDIO
-========================== -->
-
+<!-- AUDIO -->
 
 <div id="audio-list-container"></div>
-
 
 
 <audio
@@ -262,15 +217,12 @@ id="slide-audio"
 controls
 style="display:none;">
 
-
 <source
 id="audio-source"
 src=""
 type="audio/mpeg">
 
-
 </audio>
-
 
 
 <button
@@ -285,37 +237,20 @@ Hide Player
 
 
 
-
-
-
-<!-- ==========================
-     VIDEO
-========================== -->
+<!-- VIDEO -->
 
 
 <video
 id="slide-video"
 controls
-style="
-display:none;
-max-width:80%;
-max-height:70%;
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:2000;
-">
-
+style="display:none;">
 
 <source
 id="video-source"
 src=""
 type="video/mp4">
 
-
 </video>
-
 
 
 
@@ -323,9 +258,7 @@ type="video/mp4">
 id="hide-video-btn"
 style="display:none;">
 
-
 Hide Video
-
 
 </button>
 
@@ -333,12 +266,7 @@ Hide Video
 
 
 
-
-
-
-<!-- ==========================
-     EDIT TOOLBAR
-========================== -->
+<!-- EDIT -->
 
 
 <div id="edit-tray">
@@ -351,18 +279,13 @@ id="pencil-tool">
 </button>
 
 
-
 <div id="pencil-size-menu">
 
 <div class="size-option" data-size="2"></div>
-
 <div class="size-option" data-size="5"></div>
-
 <div class="size-option" data-size="10"></div>
 
-
 </div>
-
 
 
 <button class="edit-tool-btn" id="pen-tool">
@@ -390,15 +313,18 @@ id="pencil-tool">
 </button>
 
 
+</div>
+
 
 </div>
 
 
 
-</div>
-
+<!-- viewer loader ONLY -->
 
 <script src="js/viewer.js"></script>
 
+
 </body>
+
 </html>
