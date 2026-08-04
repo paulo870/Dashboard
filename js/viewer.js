@@ -4,6 +4,8 @@
 // =====================================
 
 
+// GET BOOK ID
+
 const params = new URLSearchParams(
     window.location.search
 );
@@ -23,9 +25,14 @@ if (!BOOK_ID) {
 
 
 
+// =====================================
+// SUPABASE STORAGE
+// =====================================
+
 
 const STORAGE_ROOT =
-https://vjzcwbvyfnnwsuaxeauw.supabase.co/rest/v1/
+"https://vjzcwbvyfnnwsuaxeauw.supabase.co/storage/v1/object/public/books/";
+
 
 
 const BOOK_ROOT =
@@ -33,43 +40,65 @@ const BOOK_ROOT =
 
 
 
+
+// =====================================
+// BOOK PATHS
+// =====================================
+
+
 window.BOOK = {
+
 
     id: BOOK_ID,
 
+
     root: BOOK_ROOT,
 
-    images: BOOK_ROOT + "images/",
 
-    audio: BOOK_ROOT + "audio/",
+    images:
+    BOOK_ROOT + "images/",
 
-    video: BOOK_ROOT + "video/"
+
+    audio:
+    BOOK_ROOT + "audio/",
+
+
+    video:
+    BOOK_ROOT + "video/"
+
 
 };
 
 
 
+console.log("BOOK OPENED:");
 console.log(window.BOOK);
 
 
 
-// LOAD BOOK PRESENTATION SCRIPT
+
+// =====================================
+// LOAD PRESENTATION SCRIPT FROM GITHUB
+// =====================================
+
 
 const script =
 document.createElement("script");
 
 
+// script.js stays inside your GitHub project
 script.src =
-BOOK_ROOT + "js/script.js";
+"js/script.js";
 
 
 
 script.onload = function(){
 
+
     console.log(
-        "Presentation Plus loaded:",
-        BOOK_ID
+        "Presentation Plus loaded successfully"
     );
+
 
 };
 
@@ -77,13 +106,14 @@ script.onload = function(){
 
 script.onerror = function(){
 
+
     console.error(
-        "FAILED TO LOAD:",
-        script.src
+        "Could not load Presentation Plus script"
     );
+
 
 };
 
 
 
-document.head.appendChild(script);
+document.body.appendChild(script);
