@@ -1,39 +1,31 @@
 // =====================================
 // POLIGLOTA PRESENTATION VIEWER
+// viewer.js
 // =====================================
 
 
-// GET BOOK ID
-
-const params =
-new URLSearchParams(
-window.location.search
+const params = new URLSearchParams(
+    window.location.search
 );
 
 
-const BOOK_ID =
-params.get("id");
+const BOOK_ID = params.get("id");
 
 
-
-if(!BOOK_ID){
+if (!BOOK_ID) {
 
     alert("No book selected.");
 
-    window.location.href="index.html";
+    window.location.href = "index.html";
 
 }
 
 
 
-
-// =====================================
-// SUPABASE STORAGE
-// =====================================
-
+// CHANGE THIS TO YOUR REAL SUPABASE URL
 
 const STORAGE_ROOT =
-"https://YOUR_PROJECT.supabase.co/storage/v1/object/public/books/";
+"https://YOUR_REAL_PROJECT.supabase.co/storage/v1/object/public/books/";
 
 
 
@@ -42,121 +34,57 @@ const BOOK_ROOT =
 
 
 
-
-
-// =====================================
-// BOOK PATHS
-// =====================================
-
-
 window.BOOK = {
 
+    id: BOOK_ID,
 
-id: BOOK_ID,
+    root: BOOK_ROOT,
 
+    images: BOOK_ROOT + "images/",
 
-root: BOOK_ROOT,
+    audio: BOOK_ROOT + "audio/",
 
-
-images:
-BOOK_ROOT + "images/",
-
-
-audio:
-BOOK_ROOT + "audio/",
-
-
-video:
-BOOK_ROOT + "video/",
-
-
-js:
-BOOK_ROOT + "js/"
-
-
+    video: BOOK_ROOT + "video/"
 
 };
 
 
 
-
-console.log(
-"Loading book:",
-BOOK.id
-);
+console.log(window.BOOK);
 
 
 
-console.log(
-"Book path:",
-BOOK.root
-);
+// LOAD BOOK PRESENTATION SCRIPT
 
-
-
-
-
-
-// =====================================
-// PATH HELPER
-// =====================================
-
-
-window.bookFile=function(file){
-
-
-return BOOK.root + file;
-
-
-};
-
-
-
-
-
-
-// =====================================
-// LOAD BOOK SCRIPT
-// =====================================
-
-
-const bookScript =
+const script =
 document.createElement("script");
 
 
-
-bookScript.src =
-BOOK.js + "script.js";
-
+script.src =
+BOOK_ROOT + "js/script.js";
 
 
-bookScript.onload=function(){
 
+script.onload = function(){
 
-console.log(
-"Presentation Plus loaded:",
-BOOK.id
-);
-
+    console.log(
+        "Presentation Plus loaded:",
+        BOOK_ID
+    );
 
 };
 
 
 
-bookScript.onerror=function(){
+script.onerror = function(){
 
-
-console.error(
-"Could not load:",
-bookScript.src
-);
-
+    console.error(
+        "FAILED TO LOAD:",
+        script.src
+    );
 
 };
 
 
 
-
-document.body.appendChild(
-bookScript
-);
+document.head.appendChild(script);
