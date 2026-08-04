@@ -109,7 +109,7 @@ function loadImage(src) {
 function loadHome() {
     currentImages = [];
     currentIndex = 0;
-    loadImage("images/homepage.jpeg");
+    loadImage(image("homepage.jpeg"));
     prevBtn.style.display = "none";
     nextBtn.style.display = "none";
 }
@@ -122,7 +122,8 @@ function loadStudentUnit(unitNumber) {
     currentIndex = 0;
 
     const folderName = "unit_" + unitNumber;
-    const basePath = `images/student-book-pages/${folderName}/`;
+    const basePath =
+image(`student-book-pages/${folderName}/`);
 
     let pageNumbers = [];
     switch(unitNumber) {
@@ -393,7 +394,8 @@ audioBtn.addEventListener("click", function(e) {
 
         btn.addEventListener("click", () => {
             const folder = bookType === "student" ? "student_book_audios" : "activity_book_audios";
-            audioSource.src = `audio/${folder}/unit_${unit}/${track}.mp3`;
+            audioSource.src =
+audio(`${folder}/unit_${unit}/${track}.mp3`);
             audioPlayer.load();
             showAudioPlayer(); // <-- use the new function
             audioPlayer.controls = true;
@@ -505,7 +507,7 @@ videoBtn.addEventListener("click", function(e) {
         btn.textContent = `Video ${index + 1}`;
 
         btn.addEventListener("click", () => {
-            videoSource.src = `video/unit_${unit}/${track}.mp4`;
+            videoSource.src = video(`unit_${unit}/${track}.mp4`);
             videoPlayer.load();
             showVideoPlayer();
         });
