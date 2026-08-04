@@ -3,16 +3,15 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Poliglota Digital Library
-    </title>
+<title>
+Poliglota Digital Library
+</title>
 
-
-    <link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 
@@ -23,170 +22,161 @@
 <div class="app">
 
 
-    <!-- SIDEBAR -->
+<!-- SIDEBAR -->
 
-    <aside class="sidebar">
+<aside class="sidebar">
 
 
-        <div class="brand">
+<div class="brand">
 
-            <img src="assets/logo.png">
+<img src="assets/logo.png">
 
-            <div>
 
-                <h1>
-                    POLIGLOTA
-                </h1>
+<div>
 
-                <p>
-                    Digital Library
-                </p>
+<h1>
+POLIGLOTA
+</h1>
 
-            </div>
+<p>
+Digital Library
+</p>
 
-        </div>
 
+</div>
 
 
-        <nav>
+</div>
 
 
-            <button class="nav-btn active" data-filter="all">
 
-                📚 All Books
 
-            </button>
+<nav>
 
 
+<button class="nav-btn active" data-filter="all">
 
-            <button class="nav-btn" data-filter="Kids">
+📚 All Books
 
-                👧 Kids
+</button>
 
-            </button>
 
+<button class="nav-btn" data-filter="Kids">
 
+👧 Kids
 
-            <button class="nav-btn" data-filter="Adults">
+</button>
 
-                🎓 Adults
 
-            </button>
+<button class="nav-btn" data-filter="Adults">
 
+🎓 Adults
 
+</button>
 
-            <button class="nav-btn" data-filter="Business">
 
-                💼 Business
+<button class="nav-btn" data-filter="Business">
 
-            </button>
+💼 Business
 
+</button>
 
 
-            <button class="nav-btn" data-filter="favorites">
+<button class="nav-btn" data-filter="favorites">
 
-                ⭐ Favorites
+⭐ Favorites
 
-            </button>
+</button>
 
 
+<button class="nav-btn" data-filter="recent">
 
-            <button class="nav-btn" data-filter="recent">
+🕒 Recently Opened
 
-                🕒 Recently Opened
+</button>
 
-            </button>
 
+</nav>
 
 
-        </nav>
+</aside>
 
 
-    </aside>
 
 
 
 
+<!-- CONTENT -->
 
-    <!-- MAIN CONTENT -->
+<main class="content">
 
 
-    <main class="content">
 
+<header class="top">
 
 
-        <header class="top">
+<h2>
+Digital Teaching Library
+</h2>
 
 
-            <h2>
-                Digital Teaching Library
-            </h2>
+<input
+id="searchInput"
+type="text"
+placeholder="Search books..."
+>
 
 
+</header>
 
-            <input
-                id="searchInput"
-                type="text"
-                placeholder="Search books..."
-            >
 
 
 
-        </header>
 
+<section id="recentSection">
 
 
+<h2>
+Continue Teaching
+</h2>
 
 
-        <!-- RECENT -->
+<div
+id="recentBooks"
+class="book-grid">
 
-        <section id="recentSection">
+</div>
 
 
-            <h2>
-                Continue Teaching
-            </h2>
+</section>
 
 
-            <div
-                id="recentBooks"
-                class="book-grid">
-            </div>
 
 
-        </section>
 
 
+<section>
 
 
+<h2 id="sectionTitle">
 
+All Books
 
+</h2>
 
-        <!-- ALL BOOKS -->
 
+<div
+id="booksContainer"
+class="book-grid">
 
-        <section>
+</div>
 
 
-            <h2 id="sectionTitle">
+</section>
 
-                All Books
 
-            </h2>
 
-
-            <div
-                id="booksContainer"
-                class="book-grid">
-            </div>
-
-
-        </section>
-
-
-
-    </main>
-
+</main>
 
 
 </div>
@@ -205,50 +195,58 @@ id="passwordModal"
 class="modal">
 
 
-    <div class="modal-card">
-
-
-        <button id="closeModal">
-
-            ×
-
-        </button>
+<div class="modal-card">
 
 
 
-        <img
-        id="modalCover">
+<button id="closeModal">
+
+×
+
+</button>
 
 
 
-        <h2 id="modalTitle"></h2>
 
-
-        <p id="modalInfo"></p>
-
-
-
-        <input
-        id="passwordInput"
-        type="password"
-        placeholder="Enter password">
+<img
+id="modalCover"
+src=""
+alt="Book cover">
 
 
 
-        <button
-        id="openBook">
+<h2 id="modalTitle"></h2>
 
-            Open Book
 
-        </button>
+<p id="modalInfo"></p>
 
 
 
-        <p id="passwordError"></p>
+
+<input
+id="passwordInput"
+type="password"
+placeholder="Enter password">
 
 
 
-    </div>
+
+
+<button id="openBook">
+
+Open Book
+
+</button>
+
+
+
+
+<p id="passwordError"></p>
+
+
+
+
+</div>
 
 
 </div>
@@ -257,7 +255,12 @@ class="modal">
 
 
 
+<!-- IMPORTANT ORDER -->
+
+<script src="js/books.js"></script>
+
 <script src="js/dashboard.js"></script>
+
 
 
 </body>
