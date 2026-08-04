@@ -1,3 +1,15 @@
+// =====================================
+// CURRENT BOOK
+// =====================================
+
+const BOOK = "BR-Intermediate";
+
+// =====================================
+// SUPABASE STORAGE
+// =====================================
+
+const STORAGE =
+"https://YOUR_PROJECT.supabase.co/storage/v1/object/public/books/";
 const slideImage = document.getElementById("slide-image");
 const slideContainer = document.querySelector(".slide-container");
 const homeBtn = document.getElementById("home-btn");
