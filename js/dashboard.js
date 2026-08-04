@@ -1,8 +1,7 @@
-let books = [];
-
 let selectedBook = null;
 
 let currentFilter = "all";
+
 
 
 // ELEMENTS
@@ -10,66 +9,59 @@ let currentFilter = "all";
 const booksContainer =
 document.getElementById("booksContainer");
 
+
 const recentBooks =
 document.getElementById("recentBooks");
+
 
 const searchInput =
 document.getElementById("searchInput");
 
+
 const modal =
 document.getElementById("passwordModal");
+
 
 const modalCover =
 document.getElementById("modalCover");
 
+
 const modalTitle =
 document.getElementById("modalTitle");
+
 
 const modalInfo =
 document.getElementById("modalInfo");
 
+
 const passwordInput =
 document.getElementById("passwordInput");
+
 
 const passwordError =
 document.getElementById("passwordError");
 
 
 
+
+
 // LOAD BOOKS
 
-async function loadBooks(){
-
-    try {
-
-        const response =
-        await fetch("books/library.json");
+function loadBooks(){
 
 
-        books =
-        await response.json();
+    displayBooks(books);
 
+    displayRecent();
 
-        displayBooks(books);
-
-        displayRecent();
-
-
-    }
-
-  catch (error) {
-
-    console.error(error);
-
-    booksContainer.innerHTML = `
-        <h2>Unable to load library.</h2>
-        <p>${error.message}</p>
-    `;
 
 }
-}
+
 
 loadBooks();
+
+
+
 
 
 
@@ -91,26 +83,40 @@ function displayBooks(list){
         card.className="book-card";
 
 
-        card.innerHTML=`
 
-        <img 
+        card.innerHTML = `
+
+
+        <img
         class="book-cover"
         src="${book.cover}">
 
 
+
         <div class="book-details">
 
-        <h3>${book.title}</h3>
 
-        <p>${book.folder}</p>
+        <h3>
+        ${book.title}
+        </h3>
+
+
+        <p>
+        ${book.category}
+        </p>
+
 
 
         <button class="open-btn">
+
         Open Book
+
         </button>
 
 
+
         </div>
+
 
         `;
 
@@ -118,12 +124,17 @@ function displayBooks(list){
 
         card
         .querySelector(".open-btn")
-        .onclick=()=>openPassword(book);
+        .onclick = () => {
+
+
+            openPassword(book);
+
+
+        };
 
 
 
         booksContainer.appendChild(card);
-
 
 
     });
@@ -135,30 +146,41 @@ function displayBooks(list){
 
 
 
+
+
 // SEARCH
+
 
 searchInput.oninput=function(){
 
 
-    const value =
-    this.value.toLowerCase();
+const value =
+this.value.toLowerCase();
 
 
 
-    const filtered =
-    books.filter(book=>
-
-        book.title
-        .toLowerCase()
-        .includes(value)
-
-    );
+const filtered =
+books.filter(book =>
 
 
-    displayBooks(filtered);
+book.title
+.toLowerCase()
+.includes(value)
+
+
+);
+
+
+
+displayBooks(filtered);
+
 
 
 };
+
+
+
+
 
 
 
@@ -170,29 +192,29 @@ searchInput.oninput=function(){
 function openPassword(book){
 
 
-    selectedBook=book;
+selectedBook = book;
 
 
-    modalCover.src =
-    book.cover;
+modalCover.src =
+book.cover;
 
 
-    modalTitle.textContent =
-    book.title;
+modalTitle.textContent =
+book.title;
 
 
-    modalInfo.textContent =
-    book.folder;
+modalInfo.textContent =
+book.category;
 
 
 
-    passwordInput.value="";
+passwordInput.value="";
 
 
-    passwordError.textContent="";
+passwordError.textContent="";
 
 
-    modal.classList.add("show");
+modal.classList.add("show");
 
 
 }
@@ -201,13 +223,19 @@ function openPassword(book){
 
 
 
+
+
 document
 .getElementById("closeModal")
-.onclick=()=>{
+.onclick=function(){
 
-    modal.classList.remove("show");
+
+modal.classList.remove("show");
+
 
 };
+
+
 
 
 
@@ -219,22 +247,28 @@ document
 .onclick=function(){
 
 
-    if(passwordInput.value!=="1234"){
 
-        passwordError.textContent =
-        "Incorrect password";
-
-        return;
-
-    }
+if(passwordInput.value !== selectedBook.password){
 
 
+passwordError.textContent =
+"Incorrect password";
 
-    saveRecent(selectedBook);
+
+return;
 
 
-    window.location.href =
-    selectedBook.path;
+}
+
+
+
+saveRecent(selectedBook);
+
+
+
+window.location.href =
+"password.html?id=" + selectedBook.id;
+
 
 
 };
@@ -243,72 +277,93 @@ document
 
 
 
-// RECENT
+
+
+
+// RECENT BOOKS
+
 
 function saveRecent(book){
 
 
-    let recent =
-    JSON.parse(
-    localStorage.getItem("recent") || "[]"
-    );
-
-
-    recent =
-    recent.filter(
-    x=>x.folder!==book.folder
-    );
-
-
-    recent.unshift(book);
-
-
-    recent =
-    recent.slice(0,5);
+let recent =
+JSON.parse(
+localStorage.getItem("recent") || "[]"
+);
 
 
 
-    localStorage.setItem(
-    "recent",
-    JSON.stringify(recent)
-    );
+recent =
+recent.filter(
+item=>item.id !== book.id
+);
+
+
+
+recent.unshift(book);
+
+
+
+recent =
+recent.slice(0,5);
+
+
+
+localStorage.setItem(
+"recent",
+JSON.stringify(recent)
+);
+
 
 }
+
+
+
+
 
 
 
 function displayRecent(){
 
 
-    let recent =
-    JSON.parse(
-    localStorage.getItem("recent") || "[]"
-    );
+let recent =
+JSON.parse(
+localStorage.getItem("recent") || "[]"
+);
 
 
-    recentBooks.innerHTML="";
+
+recentBooks.innerHTML="";
 
 
-    recent.forEach(book=>{
+
+recent.forEach(book=>{
 
 
-        const img =
-        document.createElement("img");
+const img =
+document.createElement("img");
 
 
-        img.src=book.cover;
 
-        img.className="book-cover";
-
-
-        img.onclick=
-        ()=>openPassword(book);
+img.src =
+book.cover;
 
 
-        recentBooks.appendChild(img);
+img.className =
+"book-cover";
 
 
-    });
+
+img.onclick =
+()=>openPassword(book);
+
+
+
+recentBooks.appendChild(img);
+
+
+
+});
 
 
 }
