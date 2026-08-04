@@ -10,6 +10,18 @@ const BOOK = "BR-Intermediate";
 
 const STORAGE =
 "https://YOUR_PROJECT.supabase.co/storage/v1/object/public/books/";
+
+function image(file) {
+    return `${STORAGE}${BOOK}/images/${file}`;
+}
+
+function audio(file) {
+    return `${STORAGE}${BOOK}/audio/${file}`;
+}
+
+function video(file) {
+    return `${STORAGE}${BOOK}/video/${file}`;
+}
 const slideImage = document.getElementById("slide-image");
 const slideContainer = document.querySelector(".slide-container");
 const homeBtn = document.getElementById("home-btn");
