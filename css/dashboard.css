@@ -1,0 +1,656 @@
+/* =====================================
+   POLIGLOTA DIGITAL LIBRARY
+   DASHBOARD STYLE
+===================================== */
+
+
+* {
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+
+}
+
+
+
+body {
+
+    background:#0f172a;
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+
+/* =====================================
+   APP LAYOUT
+===================================== */
+
+
+.app {
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+
+.sidebar {
+
+    width:270px;
+
+    background:#111827;
+
+    border-right:1px solid #1f2937;
+
+    padding:25px 20px;
+
+    position:fixed;
+
+    height:100vh;
+
+}
+
+
+
+.brand {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.brand img {
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:contain;
+
+}
+
+
+
+.brand h1 {
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.brand p {
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+/* NAVIGATION */
+
+
+nav {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+.nav-btn {
+
+    background:none;
+
+    border:none;
+
+    color:#cbd5e1;
+
+    text-align:left;
+
+    padding:14px 16px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.2s;
+
+}
+
+
+
+.nav-btn:hover {
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+
+
+.nav-btn.active {
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+
+.content {
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+}
+
+
+
+
+
+.top {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.top h2 {
+
+    font-size:30px;
+
+}
+
+
+
+#searchInput {
+
+    width:350px;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    border:none;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+
+#searchInput:focus {
+
+    outline:none;
+
+    background:#334155;
+
+}
+
+
+
+
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+
+section {
+
+    margin-bottom:45px;
+
+}
+
+
+
+section h2 {
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =====================================
+   BOOK GRID
+===================================== */
+
+
+.book-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(230px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+
+
+/* =====================================
+   BOOK CARD
+===================================== */
+
+
+.book-card {
+
+    background:#1e293b;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+
+
+.book-card:hover {
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+
+.book-cover {
+
+    height:280px;
+
+    width:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+
+
+.book-details {
+
+    padding:18px;
+
+}
+
+
+
+.book-details h3 {
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.book-details p {
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.open-btn {
+
+    margin-top:15px;
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+
+
+.open-btn:hover {
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+.favorite {
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    background:#0f172a;
+
+    border-radius:50%;
+
+    width:38px;
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+}
+
+
+
+
+
+/* =====================================
+   PASSWORD MODAL
+===================================== */
+
+
+.modal {
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.75);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:1000;
+
+}
+
+
+
+.modal.show {
+
+    display:flex;
+
+}
+
+
+
+.modal-card {
+
+    background:#1e293b;
+
+    width:400px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+
+
+#closeModal {
+
+    position:absolute;
+
+    right:15px;
+
+    top:10px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+
+
+#modalCover {
+
+    width:160px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+#modalInfo {
+
+    color:#94a3b8;
+
+    margin-bottom:20px;
+
+}
+
+
+
+#passwordInput {
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:none;
+
+    background:#0f172a;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+
+
+#openBook {
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+#passwordError {
+
+    color:#ef4444;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+
+@media(max-width:900px){
+
+
+    .sidebar {
+
+        width:80px;
+
+        padding:20px 10px;
+
+    }
+
+
+
+    .brand div {
+
+        display:none;
+
+    }
+
+
+
+    .nav-btn {
+
+        font-size:0;
+
+        text-align:center;
+
+    }
+
+
+
+    .content {
+
+        margin-left:80px;
+
+        width:calc(100% - 80px);
+
+    }
+
+
+
+    .top {
+
+        flex-direction:column;
+
+        gap:20px;
+
+        align-items:stretch;
+
+    }
+
+
+
+    #searchInput {
+
+        width:100%;
+
+    }
+
+
+}
