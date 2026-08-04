@@ -162,7 +162,7 @@ image(`student-book-pages/${folderName}/`);
     }
 
     pageNumbers.forEach(num => {
-        currentImages.push(basePath + "page" + num + ".JPG");
+        currentImages.push(basePath + "page" + num + ".jpg");
     });
 
     loadImage(currentImages[currentIndex]);
@@ -198,7 +198,7 @@ function loadActivityUnit(unitNumber) {
     }
 
     pageNumbers.forEach(num => {
-        currentImages.push(basePath + "page" + num + ".JPG");
+        currentImages.push(basePath + "page" + num + ".jpg");
     });
 
     if (currentImages.length > 1) {
@@ -322,11 +322,11 @@ window.addEventListener("load", () => {
             const { bookType, unit, pageNum } = JSON.parse(savedState);
             if (bookType === "student") {
                 loadStudentUnit(unit);
-                currentIndex = currentImages.findIndex(src => src.includes(`page${pageNum}.JPG`));
+                currentIndex = currentImages.findIndex(src => src.includes(`page${pageNum}.jpg`));
                 if (currentIndex >= 0) loadImage(currentImages[currentIndex]);
             } else if (bookType === "activity") {
                 loadActivityUnit(unit);
-                currentIndex = currentImages.findIndex(src => src.includes(`page${pageNum}.JPG`));
+                currentIndex = currentImages.findIndex(src => src.includes(`page${pageNum}.jpg`));
                 if (currentIndex >= 0) loadImage(currentImages[currentIndex]);
             }
         } else {
