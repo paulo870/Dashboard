@@ -182,7 +182,7 @@ function loadActivityUnit(unitNumber) {
     currentIndex = 0;
 
     const folderName = "unit_" + unitNumber;
-    const basePath = `images/activity-book-pages/${folderName}/`;
+    const basePath = image(`activity-book-pages/${folderName}/`);
 
     let pageNumbers = [];
     switch(unitNumber) {
