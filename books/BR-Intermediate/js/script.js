@@ -2,19 +2,15 @@
 // CURRENT BOOK
 // =====================================
 
-
-const BOOK =
-window.BOOK.id;
-
+const BOOK = "BR-Intermediate";
 
 
 // =====================================
 // SUPABASE STORAGE
 // =====================================
 
-
 const STORAGE =
-window.BOOK.root;
+"https://vjzcwbvyfnnwsuaxeauw.supabase.co/storage/v1/object/public/books/BR-Intermediate/";
 
 
 
