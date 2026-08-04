@@ -57,20 +57,14 @@ async function loadBooks(){
 
     }
 
-    catch(error){
+  catch (error) {
 
-        console.error(error);
+    console.error(error);
 
-
-        booksContainer.innerHTML =
-        `
-        <p>
-        No books found.
-        Run generate-books.js first.
-        </p>
-        `;
-
-    }
+    booksContainer.innerHTML = `
+        <h2>Unable to load library.</h2>
+        <p>${error.message}</p>
+    `;
 
 }
 
