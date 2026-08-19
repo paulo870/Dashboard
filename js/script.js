@@ -66,14 +66,14 @@ const books = [
 
 
     {
-        title: "English B2",
+        title: "English B1+",
         level: "Intermediate",
         language: "English",
         languageKey: "english",
         programme: "Adults",
         programmeKey: "adults",
-        cover: "images/books/english-b2.jpg",
-        url: "https://YOUR-ENGLISH-B2-SITE.vercel.app"
+        cover: "images/books/english-b1plus.jpg",
+        url: "https://teste1965.vercel.app"
     },
 
 
