@@ -84,7 +84,7 @@ const books = [
         languageKey: "english",
         programme: "Adults",
         programmeKey: "adults",
-        cover: "images/books/english-c1.jpg",
+        cover: "images/books/english-b2.jpg",
         url: "https://YOUR-ENGLISH-C1-SITE.vercel.app"
     },
 
@@ -96,7 +96,7 @@ const books = [
         languageKey: "english",
         programme: "Adults",
         programmeKey: "adults",
-        cover: "images/books/english-c2.jpg",
+        cover: "images/books/english-c1.jpg",
         url: "https://YOUR-ENGLISH-C2-SITE.vercel.app"
     },
 
