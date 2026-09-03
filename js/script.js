@@ -97,7 +97,7 @@ const books = [
         programme: "Adults",
         programmeKey: "adults",
         cover: "images/books/english-c1.jpg",
-        url: "https://YOUR-ENGLISH-C2-SITE.vercel.app"
+        url: "https://brc-1.vercel.app"
     },
 
 
