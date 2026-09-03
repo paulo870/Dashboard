@@ -72,7 +72,7 @@ const books = [
         languageKey: "english",
         programme: "Adults",
         programmeKey: "adults",
-        cover: "images/books/english-b1plus.jpg",
+        cover: "images/books/english-b1+.jpg",
         url: "https://brb-1plus.vercel.app"
     },
 
