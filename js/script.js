@@ -61,7 +61,7 @@ const books = [
         programme: "Adults",
         programmeKey: "adults",
         cover: "images/books/english-b1.jpg",
-        url: "https://YOUR-ENGLISH-B1-SITE.vercel.app"
+        url: "https://brb-1.vercel.app"
     },
 
 
@@ -73,12 +73,12 @@ const books = [
         programme: "Adults",
         programmeKey: "adults",
         cover: "images/books/english-b1plus.jpg",
-        url: "https://test1965.vercel.app"
+        url: "https://brb-1plus.vercel.app"
     },
 
 
     {
-        title: "English C1",
+        title: "English B2",
         level: "Upper Intermediate",
         language: "English",
         languageKey: "english",
@@ -90,7 +90,7 @@ const books = [
 
 
     {
-        title: "English C2",
+        title: "English C1",
         level: "Advanced",
         language: "English",
         languageKey: "english",
