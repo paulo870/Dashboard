@@ -169,7 +169,7 @@ const books = [
         programme: "Adults",
         programmeKey: "adults",
         cover: "images/books/french-a1.jpg",
-        url: "https://YOUR-FRENCH-A1-SITE.vercel.app"
+        url: "https://fra-1.vercel.app"
     },
 
 
