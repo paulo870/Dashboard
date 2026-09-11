@@ -164,7 +164,7 @@ const books = [
         programme: "Teens",
         programmeKey: "teens",
         cover: "images/books/teens-level-2.jpg",
-        url: "https://thb-1.vercel.app/.vercel.app"
+        url: "https://thb-1.vercel.app"
     },
 
 
