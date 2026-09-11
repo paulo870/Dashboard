@@ -157,7 +157,7 @@ const books = [
     },
 
    {
-        title: "English Teens Level 1",
+        title: "English Teens Level 2",
         level: "Think 2",
         language: "English",
         languageKey: "english",
