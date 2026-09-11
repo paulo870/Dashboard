@@ -135,7 +135,7 @@ const books = [
 
     {
         title: "English Teens Starter",
-        level: "Starter",
+        level: "Think Starter",
         language: "English",
         languageKey: "english",
         programme: "Teens",
@@ -147,13 +147,24 @@ const books = [
 
     {
         title: "English Teens Level 1",
-        level: "Level 1",
+        level: "Think 1",
         language: "English",
         languageKey: "english",
         programme: "Teens",
         programmeKey: "teens",
         cover: "images/books/teens-level-1.jpg",
         url: "https://YOUR-TEENS-LEVEL1-SITE.vercel.app"
+    },
+
+   {
+        title: "English Teens Level 1",
+        level: "Think 2",
+        language: "English",
+        languageKey: "english",
+        programme: "Teens",
+        programmeKey: "teens",
+        cover: "images/books/teens-level-2.jpg",
+        url: "https://thb-1.vercel.app/.vercel.app"
     },
 
 
