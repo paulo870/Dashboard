@@ -220,7 +220,7 @@ const books = [
         programme: "Adults",
         programmeKey: "adults",
         cover: "images/books/portuguese-a1.jpg",
-        url: "https://YOUR-PORTUGUESE-A1-SITE.vercel.app"
+        url: "https://ptai-eight.vercel.app/"
     },
 
 
