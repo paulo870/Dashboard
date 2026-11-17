@@ -232,7 +232,7 @@ const books = [
         programme: "Adults",
         programmeKey: "adults",
         cover: "images/books/portuguese-a2.jpg",
-        url: "https://YOUR-PORTUGUESE-A2-SITE.vercel.app"
+        url: "https://pta2-mocha.vercel.app/"
     },
 
 
